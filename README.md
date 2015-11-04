@@ -47,19 +47,19 @@ http://www.restran.net/2015/11/03/torando-mongodb-drivers-performance/
 
     ab -n 10000 -c 100 http://127.0.0.1:8500/api/posts/query/
     
-![http_supervisorctl](data/mongodb_tornaod_1.png "")
+![mongodb_tornaod_1](data/mongodb_tornaod_1.png "")
 
 总共 100 个请求，每次并发 10 个（同时发送 10 个），使用如下命令
 
     ab -n 100 -c 10 http://127.0.0.1:8500/api/posts/query/
 
-![http_supervisorctl](data/mongodb_tornaod_2.png "")
+![mongodb_tornaod_2](data/mongodb_tornaod_2.png "")
 
 ### 百分比请求的最大响应时间
 
 下面两张图，左边坐标的单位是毫秒。例如 Motor 有 50% 的请求是在 376 毫秒内完成的。
 
-![http_supervisorctl](data/mongodb_tornaod_3.png "")
+![mongodb_tornaod_3](data/mongodb_tornaod_3.png "")
 
 PyMongo 2.8，PyMongo 2.8 + gevent，MongoEngine + PyMongo 2.8 三条线重叠在了一起，它们之间的性能相当
 
